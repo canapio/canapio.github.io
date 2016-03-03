@@ -1,1 +1,145 @@
-Hello World
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canapio's portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="dist/js/jquery-2.2.1.min.js" type="text/javascript"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="dist/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="dist/js/bootstrap.min.js"></script>
+
+
+	<!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+
+
+  <!-- <link href='https://fonts.googleapis.com/css?family=Quattrocento:700' rel='stylesheet' type='text/css'> -->
+
+
+  <style media="screen">
+  body {
+      padding-top: 50px;
+  }
+
+
+
+
+  div.cover {
+    background: url("img/cover.jpg");
+  }
+  div.coverbox0 {
+    position: absolute;
+    border: 1px solid black;
+    display: inline-block;
+  }
+  div.coverbox1 {
+    padding: 14px 30px;
+    margin: 2px;
+    border: 8px solid black;
+    font-family: 'Quattrocento', serif;
+    font-size: 44px;
+    color: black;
+    display: inline-block;
+  }
+
+  </style>
+
+</head>
+<body class="cover" style="background-color: hsla(0,0%,99%,1);">
+  <!-- <nav id="social" class="social-icons"><ul id="menu-social-items" class="social-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1734"><a href="https://www.facebook.com/colorlib" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://www.facebook.com/colorlib', 'Facebook');"><i class="social_icon fa"><span>Facebook</span></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1735"><a href="http://twitter.com/colorlib" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://twitter.com/colorlib', 'Twitter');"><i class="social_icon fa"><span>Twitter</span></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1736"><a href="https://www.youtube.com/channel/UCOaovjLNXdIch2vLFsw_uew" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://www.youtube.com/channel/UCOaovjLNXdIch2vLFsw_uew', 'youtube');"><i class="social_icon fa"><span>youtube</span></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1737"><a href="https://plus.google.com/100289203607749737039" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://plus.google.com/100289203607749737039', 'Google+');"><i class="social_icon fa"><span>Google+</span></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1738"><a href="http://instagram.com" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://instagram.com', 'Instagram');"><i class="social_icon fa"><span>Instagram</span></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1739"><a href="https://github.com/puikinsh/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://github.com/puikinsh/', 'Github');"><i class="social_icon fa"><span>Github</span></i></a></li>
+</ul></nav>
+  <i class="fa fa-camera-retro"></i> fa-camera-retro -->
+
+
+  <nav class="navbar navbar-fixed-top" style="background-color: #ffffff; border-color: #e7e7e7;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color: #777;">Home</a>
+        </div>
+        <!-- <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>--> <!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div id="coverdiv">
+    <div id="covertextdiv" class="coverbox0">
+      <div class="coverbox1">
+        canapio's portfolio
+      </div>
+    </div>
+    <img id="coverimage" src="img/cover.jpg" alt="" style="width: 100%; height: auto;"/>
+
+  </div>
+
+
+	<footer>
+
+  </footer>
+
+</body>
+<script type="text/javascript">
+  $(window).on("load", function() {
+    setCoverView ()
+  })
+  $(window).scroll(function() {
+    // if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+    //     alert('End of Window');
+    // }
+
+    setCoverView()
+  })
+
+  $(window).bind("resize", function() {
+    setCoverView ()
+  })
+  function setCoverView () {
+    var coverimage = $("#coverimage")
+    var offset = coverimage.offset()
+    var textdiv = $("#covertextdiv")
+
+    textdiv.css({
+      top: offset.top + coverimage.height()/2 - textdiv.height()/2,
+      left: offset.left + coverimage.width()/2 - textdiv.width()/2
+    });
+  }
+</script>
+</html>
