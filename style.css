@@ -75,6 +75,15 @@
     margin: 0 15px;
   }
 
+  a:link {
+    color: #513926;
+  }
+  a:visited {
+    color: #513926;
+  }
+  a:hover {
+    color: #7F593C;
+  }
 
 
   /* unvisited link */
@@ -88,7 +97,6 @@
   /* mouse over link */
   a.aitem:hover {
       color: #D39466;
-      background-color: black;
   }
   /* selected link */
   /*a.aitem:active {
