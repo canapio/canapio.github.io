@@ -15,6 +15,7 @@
   <script src="dist/js/bootstrap.min.js"></script>
 
 
+  <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
 	<!-- <link rel="stylesheet" href="style.css"> -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
 
@@ -23,6 +24,7 @@
 
 
   <style media="screen">
+
   body {
       padding-top: 50px;
   }
@@ -35,19 +37,130 @@
   }
   div.coverbox0 {
     position: absolute;
-    border: 1px solid black;
     display: inline-block;
   }
   div.coverbox1 {
     padding: 14px 30px;
     margin: 2px;
-    border: 8px solid black;
     font-family: 'Quattrocento', serif;
-    font-size: 44px;
-    color: black;
+    font-weight: bold;
+    font-size: 2.3em;
+    color: #493322;
     display: inline-block;
   }
 
+  div.coverborder0 {
+    border: 1px solid #493322;
+  }
+  div.coverborder1 {
+    border: 8px solid #493322;
+  }
+
+
+
+
+  div.product {
+    margin: 10px 0px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: #AAAAAA
+  }
+  div.item {
+    border-bottom: 1px solid #eee;
+  }
+  a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+
+  div.item a div {
+    line-height: 60px;
+  }
+  div.item a div.title {
+    font-weight: bold;
+  }
+
+  div.item a div.description {
+    /*font-weight: bold;*/
+  }
+
+
+  footer {
+    margin-top: 70px;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f2f2f2;
+  }
+
+  .footerul li {
+    display: inline;
+  }
+  .footerul a {
+    font-size: 18px;
+    margin: 0 15px;
+  }
+
+
+
+  /* unvisited link */
+  a.aitem:link {
+    color: #3F2C1E;
+  }
+  /* visited link */
+  a.aitem:visited {
+    color: #3F2C1E;
+  }
+  /* mouse over link */
+  a.aitem:hover {
+      color: #D39466;
+      background-color: black;
+  }
+  /* selected link */
+  /*a.aitem:active {
+      color: #D39466;
+  }*/
+
+
+
+
+  .copyright {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 10px;
+    color: #696969;
+  }
+
+  ::selection {
+    background: #303030;
+    color: white;
+  }
+
+  @media screen and (max-width : 768px){
+    div.product {
+      padding-left: 15px;
+      margin: 10px 0px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 20px;
+      font-weight: bold;
+      color: #AAAAAA
+    }
+    div.item a div.title {
+      padding-left: 30px;
+      font-weight: bold;
+    }
+  }
+  @media screen and (max-width : 460px){
+    div.coverborder0 {
+      border: 0px solid black;
+    }
+    div.coverborder1 {
+      border: 0px solid black;
+    }
+  }
   </style>
 
 </head>
@@ -59,7 +172,7 @@
     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1738"><a href="http://instagram.com" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://instagram.com', 'Instagram');"><i class="social_icon fa"><span>Instagram</span></i></a></li>
     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1739"><a href="https://github.com/puikinsh/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://github.com/puikinsh/', 'Github');"><i class="social_icon fa"><span>Github</span></i></a></li>
 </ul></nav>
-  <i class="fa fa-camera-retro"></i> fa-camera-retro -->
+  <i class="fa fa-github"></i> fa-camera-retro -->
 
 
   <nav class="navbar navbar-fixed-top" style="background-color: #ffffff; border-color: #e7e7e7;">
@@ -73,48 +186,150 @@
           </button>
           <a class="navbar-brand" href="#" style="color: #777;">Home</a>
         </div>
-        <!-- <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul>
-        </div>--> <!--/.nav-collapse -->
     </div>
   </nav>
   <div id="coverdiv">
-    <div id="covertextdiv" class="coverbox0">
-      <div class="coverbox1">
+    <div id="covertextdiv" class="coverbox0 coverborder0">
+      <div class="coverbox1 coverborder1">
         canapio's portfolio
       </div>
     </div>
     <img id="coverimage" src="img/cover.jpg" alt="" style="width: 100%; height: auto;"/>
+  </div>
+  <div style="margin-top: 60px">
 
   </div>
 
+  <div class="row">
+    <div class="col-md-1 col-sm-1 col-xs-0"></div>
+    <div class="col-md-10 col-sm-10 col-xs-12">
 
-	<footer>
+      <div class="row" style="margin-bottom: 45px;">
+        <style media="screen">
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        p.descriptionme {
+          font-family: 'Nanum Gothic', serif;
+          font-weight: 900;
+          font-size: 13px;
+          color: gray;
+          padding: 0px 15px;
+        }
+        p.descriptionme a {
+          font-size: 13px;
+        }
+        @media screen and (max-width : 768px){
+          p.descriptionme {
+            padding: 0px 30px;
+          }
+        }
+        </style>
+        <p class="descriptionme">
+          iOS 개발을 공부하는 canapio입니다.
+        </p>
+        <p class="descriptionme">
+          개인개발을 즐겨하며 <a href="https://github.com/canapio">Github</a>이나 <a href="http://blog.canapio.com">블로그</a>에서 저의 활동 내역을 확인할 수 있습니다. 개발에대한 자세한 내용은 아래 링크를 통해 확인할 수 있습니다
+        </p>
+      </div>
 
-  </footer>
+
+
+      <div class="row product">Product</div>
+
+
+
+      <!--
+      Guitar Kit+
+      Roast Meister
+      Easi Calc
+      E Widget Calc
+      Dri-Viewer
+      Music Tictoc
+      한글 시계
+      Notice Manager for PNU CSE
+      Others
+      -->
+      <div class="row item">
+        <a class="aitem" href="#">
+          <div class="title col-md-6 col-xs-6">Guitar Kit+</div>
+          <div class="description col-md-6 col-xs-6">Personal Project</div>
+        </a>
+      </div>
+
+      <div class="row item">
+        <a class="aitem" href="#">
+          <div class="title col-md-6 col-xs-6">Roast Meister</div>
+          <div class="description col-md-6 col-xs-6">Personal Team Project</div>
+        </a>
+      </div>
+
+      <div class="row item">
+        <a class="aitem" href="#">
+          <div class="title col-md-6 col-xs-6">Easi Calc</div>
+          <div class="description col-md-6 col-xs-6">Personal Project</div>
+        </a>
+      </div>
+
+      <div class="row item">
+        <a class="aitem" href="#">
+          <div class="title col-md-6 col-xs-6">E Widget Calc</div>
+          <div class="description col-md-6 col-xs-6">Personal Project</div>
+        </a>
+      </div>
+
+      <div class="row item">
+        <a class="aitem" href="#">
+          <div class="title col-md-6 col-xs-6">Dri-Viewer</div>
+          <div class="description col-md-6 col-xs-6">Personal Project</div>
+        </a>
+      </div>
+
+      <div class="row item">
+        <a class="aitem" href="#">
+          <div class="title col-md-6 col-xs-6">Music Tictoc</div>
+          <div class="description col-md-6 col-xs-6">Personal Project</div>
+        </a>
+      </div>
+
+      <div class="row item">
+        <a class="aitem" href="#">
+          <div class="title col-md-6 col-xs-6">한글 시계</div>
+          <div class="description col-md-6 col-xs-6">Opened Project</div>
+        </a>
+      </div>
+
+      <div class="row item">
+        <a class="aitem" href="#">
+          <div class="title col-md-6 col-xs-6">공지알림서비스</div>
+          <div class="description col-md-6 col-xs-6">Term Project</div>
+        </a>
+      </div>
+
+      <div class="row item">
+        <a class="aitem" href="#">
+          <div class="title col-md-6 col-xs-6">Others</div>
+          <div class="description col-md-6 col-xs-6">-</div>
+        </a>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
 
 </body>
+<footer>
+  <nav style="text-align: center;">
+    <ul class="footerul" style="text-align: center; padding: 0px;">
+      <li><a href="https://github.com/canapio"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://twitter.com/canapio"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="http://blog.canapio.com/"><i class="fa fa-globe"></i></a></li>
+    </ul>
+  </nav>
+  <div class="copyright col-md-12">canapio.</div>
+</footer>
 <script type="text/javascript">
   $(window).on("load", function() {
     setCoverView ()
@@ -123,7 +338,6 @@
     // if ($(window).scrollTop() == $(document).height() - $(window).height()) {
     //     alert('End of Window');
     // }
-
     setCoverView()
   })
 
