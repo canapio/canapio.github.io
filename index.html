@@ -29,152 +29,12 @@
 
 
   <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
-	<!-- <link rel="stylesheet" href="style.css"> -->
+	<link rel="stylesheet" href="style.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
 
 
   <!-- <link href='https://fonts.googleapis.com/css?family=Quattrocento:700' rel='stylesheet' type='text/css'> -->
 
-
-  <style media="screen">
-
-  body {
-      padding-top: 50px;
-  }
-
-
-
-
-  div.cover {
-    background: url("img/cover.jpg");
-  }
-  div.coverbox0 {
-    position: absolute;
-    display: inline-block;
-  }
-  div.coverbox1 {
-    padding: 14px 30px;
-    margin: 2px;
-    font-family: 'Quattrocento', serif;
-    font-weight: bold;
-    font-size: 2.3em;
-    color: #493322;
-    display: inline-block;
-  }
-
-  div.coverborder0 {
-    border: 1px solid #493322;
-  }
-  div.coverborder1 {
-    border: 8px solid #493322;
-  }
-
-
-
-
-  div.product {
-    margin: 10px 0px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 14px;
-    font-weight: bold;
-    color: #AAAAAA
-  }
-  div.item {
-    border-bottom: 1px solid #eee;
-  }
-  a {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-  }
-
-  div.item a div {
-    line-height: 60px;
-  }
-  div.item a div.title {
-    font-weight: bold;
-  }
-
-  div.item a div.description {
-    /*font-weight: bold;*/
-  }
-
-
-  footer {
-    margin-top: 70px;
-    padding: 50px 0;
-    text-align: center;
-    background-color: #f2f2f2;
-  }
-
-  .footerul li {
-    display: inline;
-  }
-  .footerul a {
-    font-size: 18px;
-    margin: 0 15px;
-  }
-
-
-
-  /* unvisited link */
-  a.aitem:link {
-    color: #3F2C1E;
-  }
-  /* visited link */
-  a.aitem:visited {
-    color: #3F2C1E;
-  }
-  /* mouse over link */
-  a.aitem:hover {
-      color: #D39466;
-      background-color: black;
-  }
-  /* selected link */
-  /*a.aitem:active {
-      color: #D39466;
-  }*/
-
-
-
-
-  .copyright {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    font-family: "Montserrat", sans-serif;
-    margin-top: 10px;
-    color: #696969;
-  }
-
-  ::selection {
-    background: #303030;
-    color: white;
-  }
-
-  @media screen and (max-width : 768px){
-    div.product {
-      padding-left: 15px;
-      margin: 10px 0px;
-      font-family: "Courier New", Courier, monospace;
-      font-size: 20px;
-      font-weight: bold;
-      color: #AAAAAA
-    }
-    div.item a div.title {
-      padding-left: 30px;
-      font-weight: bold;
-    }
-  }
-  @media screen and (max-width : 460px){
-    div.coverborder0 {
-      border: 0px solid black;
-    }
-    div.coverborder1 {
-      border: 0px solid black;
-    }
-  }
-  </style>
 
 </head>
 <body class="cover" style="background-color: hsla(0,0%,99%,1);">
@@ -193,7 +53,7 @@
     </div>
   </nav>
   <div id="coverdiv">
-    <div id="covertextdiv" class="coverbox0 coverborder0">
+    <div id="covertextdiv" class="coverbox0 coverborder0" style="display:none;">
       <div class="coverbox1 coverborder1">
         canapio's portfolio
       </div>
@@ -209,24 +69,6 @@
     <div class="col-md-10 col-sm-10 col-xs-12">
 
       <div class="row" style="margin-bottom: 45px;">
-        <style media="screen">
-        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-        p.descriptionme {
-          font-family: 'Nanum Gothic', serif;
-          font-weight: 900;
-          font-size: 13px;
-          color: gray;
-          padding: 0px 15px;
-        }
-        p.descriptionme a {
-          font-size: 13px;
-        }
-        @media screen and (max-width : 768px){
-          p.descriptionme {
-            padding: 0px 30px;
-          }
-        }
-        </style>
         <p class="descriptionme">
           iOS 개발을 공부하는 canapio입니다.
         </p>
@@ -336,9 +178,6 @@
   <div class="copyright col-md-12">canapio.</div>
 </footer>
 <script type="text/javascript">
-  $(window).on("load", function() {
-    setCoverView ()
-  })
   $(window).scroll(function() {
     // if ($(window).scrollTop() == $(document).height() - $(window).height()) {
     //     alert('End of Window');
@@ -349,6 +188,15 @@
   $(window).bind("resize", function() {
     setCoverView ()
   })
+
+  $(document).ready(function() {
+
+  })
+  $(window).load(function() {
+    setCoverView ()
+    $("#covertextdiv").fadeIn(2500)
+  })
+
   function setCoverView () {
     var coverimage = $("#coverimage")
     var offset = coverimage.offset()

@@ -1,113 +1,156 @@
-/*Strip the ul of padding and list styling*/
-.topmenu ul {
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	position: absolute;
-}
 
-/*Create a horizontal list with spacing*/
-.topmenu li {
-	display:inline-block;
-	float: left;
-	margin-right: 1px;
-}
-
-/*Style for menu links*/
-.topmenu li a {
-	display:block;
-	min-width:140px;
-	height: 50px;
-	text-align: center;
-	line-height: 50px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #fff;
-	background: #2f3036;
-	text-decoration: none;
-}
-
-/*Hover state for top level links*/
-.topmenu li:hover a {
-	background: #19c589;
-}
-
-/*Style for dropdown links*/
-.topmenu li:hover ul a {
-	background: #f3f3f3;
-	color: #2f3036;
-	height: 40px;
-	line-height: 40px;
-}
-
-/*Hover state for dropdown links*/
-.topmenu li:hover ul a:hover {
-	background: #19c589;
-	color: #fff;
-}
-
-/*Hide dropdown links until they are needed*/
-.topmenu li ul {
-	display: none;
-}
-
-/*Make dropdown links vertical*/
-.topmenu li ul li {
-	display: block;
-	float: none;
-}
-
-/*Prevent text wrapping*/
-.topmenu li ul li a {
-	width: auto;
-	min-width: 100px;
-	padding: 0 20px;
-}
-
-/*Display the dropdown on hover*/
-.topmenu ul li a:hover + .hidden, .hidden:hover {
-	display: block;
-}
-
-/*Style 'show menu' label button and hide it by default*/
-.show-menu {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-decoration: none;
-	color: #fff;
-	background: #19c589;
-	text-align: center;
-	padding: 10px 0;
-	display: none;
-}
-
-/*Hide checkbox*/
-input[type=checkbox]{
-    display: none;
-    -webkit-appearance: none;
-}
-
-/*Show menu when invisible checkbox is checked*/
-input[type=checkbox]:checked ~ #menu{
-    display: block;
-}
+  body {
+      padding-top: 50px;
+  }
 
 
-/*Responsive Styles*/
-@media screen and (max-width : 760px){
-	/*Make dropdown links appear inline*/
-	ul {
-		position: static;
-		display: none;
-	}
-	/*Create vertical spacing*/
-	li {
-		margin-bottom: 1px;
-	}
-	/*Make all menu links full width*/
-	ul li, li a {
-		width: 100%;
-	}
-	/*Display 'show menu' link*/
-	.show-menu {
-		display:block;
-	}
-}
+
+
+  div.cover {
+    background: url("img/cover.jpg");
+  }
+  div.coverbox0 {
+    position: absolute;
+    display: inline-block;
+  }
+  div.coverbox1 {
+    padding: 14px 30px;
+    margin: 2px;
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
+    font-size: 2.3em;
+    color: #493322;
+    display: inline-block;
+  }
+
+  div.coverborder0 {
+    border: 1px solid #493322;
+  }
+  div.coverborder1 {
+    border: 8px solid #493322;
+  }
+
+
+
+
+  div.product {
+    margin: 10px 0px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: #AAAAAA
+  }
+  div.item {
+    border-bottom: 1px solid #eee;
+  }
+  a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+
+  div.item a div {
+    line-height: 60px;
+  }
+  div.item a div.title {
+    font-weight: bold;
+  }
+
+  div.item a div.description {
+    /*font-weight: bold;*/
+  }
+
+
+  footer {
+    margin-top: 70px;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f2f2f2;
+  }
+
+  .footerul li {
+    display: inline;
+  }
+  .footerul a {
+    font-size: 18px;
+    margin: 0 15px;
+  }
+
+
+
+  /* unvisited link */
+  a.aitem:link {
+    color: #3F2C1E;
+  }
+  /* visited link */
+  a.aitem:visited {
+    color: #3F2C1E;
+  }
+  /* mouse over link */
+  a.aitem:hover {
+      color: #D39466;
+      background-color: black;
+  }
+  /* selected link */
+  /*a.aitem:active {
+      color: #D39466;
+  }*/
+
+
+
+
+  .copyright {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 10px;
+    color: #696969;
+  }
+
+  ::selection {
+    background: #303030;
+    color: white;
+  }
+
+  @media screen and (max-width : 768px){
+    div.product {
+      padding-left: 15px;
+      margin: 10px 0px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 20px;
+      font-weight: bold;
+      color: #AAAAAA
+    }
+    div.item a div.title {
+      padding-left: 30px;
+      font-weight: bold;
+    }
+  }
+  @media screen and (max-width : 460px){
+    div.coverborder0 {
+      border: 0px solid black;
+    }
+    div.coverborder1 {
+      border: 0px solid black;
+    }
+  }
+
+
+
+  @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  p.descriptionme {
+    font-family: 'Nanum Gothic', serif;
+    font-weight: 900;
+    font-size: 13px;
+    color: gray;
+    padding: 0px 15px;
+  }
+  p.descriptionme a {
+    font-size: 13px;
+  }
+  @media screen and (max-width : 768px){
+    p.descriptionme {
+      padding: 0px 30px;
+    }
+  }
