@@ -336,7 +336,7 @@
 
 
 
-          <h2>Story Board</h2>
+          <h2>Screen Shot</h2>
 
 
 
@@ -370,6 +370,33 @@
       <div class="col-lg-6 col-sm-8 col-xs-12">
         <div class="bodydiv">
 
+          <style media="screen">
+            .vimeo_container {
+              position: relative;
+              width: 100%;
+              height: 0;
+              padding-bottom: 56.25%;
+              margin-bottom: 40px;
+            }
+            .vimeo_iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          </style>
+          <div class="vimeo_container">
+            <iframe id="vimeo_iframe" class="vimeo_iframe" src="https://player.vimeo.com/video/93062717" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+
+          <div class="vimeo_container">
+            <iframe class="vimeo_iframe" src="https://player.vimeo.com/video/109324931" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+
+          <div class="vimeo_container">
+            <iframe class="vimeo_iframe" src="https://player.vimeo.com/video/109325635" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
 
 
 
@@ -395,6 +422,12 @@
           <script type="text/javascript">
           $(document).ready(function() {
             $(".segment-select").Segment()
+            var userLang = navigator.language || navigator.userLanguage;
+            if (userLang == "ko") {
+              $("#vimeo_iframe").attr('src', "https://player.vimeo.com/video/93062717");
+            } else {
+              $("#vimeo_iframe").attr('src', "https://player.vimeo.com/video/93062363");
+            }
           })
           function changeSegmentValue(spanobject) {
             if ($("#targetPeople option:selected").val()=="Everybody") {
@@ -528,6 +561,7 @@
 
   <script type="text/javascript">
     // $("#downarrow")
+    //  alert ("The language is: " + userLang);
     function clickArrow() {
       alert("asdf")
     }
