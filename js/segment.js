@@ -29,7 +29,7 @@
               var onchangestringfunc = self.attr('onchange')
               if (onchangestringfunc.length > 0) {
                 onchangestringfunc = onchangestringfunc.substring(0, onchangestringfunc.length-1)
-                onchangestringfunc = onchangestringfunc + selectedvalue + ")"
+                onchangestringfunc = onchangestringfunc + "\"" + selectedvalue + "\")"
               }
 
               alert("in js :::: " + onchangestringfunc)
