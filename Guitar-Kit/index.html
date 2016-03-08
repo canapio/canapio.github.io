@@ -332,43 +332,48 @@
           </p>
 
           <h2>Version History</h2>
-          <p>
-            <b>v2.21 (15.10.03)</b>
-            <ul>
-              <li>iOS9 지원</li>
-            </ul>
-          </p><p>
-            <b>v2.20 (15.08.13)</b>
-            <ul>
-              <li>일본어 지원</li>
-              <li>러시아어 지원</li>
-            </ul>
-          </p><p>
-            <b>v2.10 (14.09.19)</b>
-            <ul>
-              <li>iOS8 지원</li>
-              <li>iPhone6(4.7inch), iPhone6+(5.5inch) 지원</li>
-              <li>안정화</li>
-            </ul>
-          </p><p>
-            <b>v2.00 (14.05.13)</b>
-            <ul>
-              <li>4000여개의 코드 탑재</li>
-              <li>정보화면 변경</li>
-              <li>아이패드 화면 가로,세로 전환 지원</li>
-              <li>버그 제거(소리 이슈 해결)</li>
-            </ul>
-          </p><p>
-            <b>v1.10 (14.01.14)</b>
-            <ul>
-              <li>iOS6이하에서 강제종료되는 이슈 제거</li>
-            </ul>
-          </p><p>
-            <b>v1.00 (14.01.09)</b>
-            <ul>
-              <li>첫 출시</li>
-            </ul>
-          </p>
+          <div id="version_history" style="display: none;">
+            <p>
+              <b>v2.21 (15.10.03)</b>
+              <ul>
+                <li>iOS9 지원</li>
+              </ul>
+            </p><p>
+              <b>v2.20 (15.08.13)</b>
+              <ul>
+                <li>일본어 지원</li>
+                <li>러시아어 지원</li>
+              </ul>
+            </p><p>
+              <b>v2.10 (14.09.19)</b>
+              <ul>
+                <li>iOS8 지원</li>
+                <li>iPhone6(4.7inch), iPhone6+(5.5inch) 지원</li>
+                <li>안정화</li>
+              </ul>
+            </p><p>
+              <b>v2.00 (14.05.13)</b>
+              <ul>
+                <li>4000여개의 코드 탑재</li>
+                <li>정보화면 변경</li>
+                <li>아이패드 화면 가로,세로 전환 지원</li>
+                <li>버그 제거(소리 이슈 해결)</li>
+              </ul>
+            </p><p>
+              <b>v1.10 (14.01.14)</b>
+              <ul>
+                <li>iOS6이하에서 강제종료되는 이슈 제거</li>
+              </ul>
+            </p><p>
+              <b>v1.00 (14.01.09)</b>
+              <ul>
+                <li>첫 출시</li>
+              </ul>
+            </p>
+          </div>
+          <a id="version_history_atag" onclick="clickVersionHistory()">펼쳐보기...</a>
+
+
 
           <h2>User Flow</h2>
 
@@ -496,6 +501,17 @@
               $(".developer_div").show()
               $(".everybody_div").hide()
             }
+          }
+
+          function clickVersionHistory() {
+            if ( $("#version_history").css('display') == 'none' ){
+              $("#version_history_atag").html("접기...")
+              $('#version_history').show()
+            } else {
+              $("#version_history_atag").html("펼쳐보기...")
+              $('#version_history').hide()
+            }
+
           }
           </script>
 
