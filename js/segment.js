@@ -25,6 +25,7 @@
                   $(this).removeAttr("selected")
                 }
               })
+              alert("in js :::: " + selectedvalue)
               eval(self.attr('onchange'))
     				});
     				$(this).after(wrapper);
