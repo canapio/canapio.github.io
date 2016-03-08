@@ -32,7 +32,6 @@
                 onchangestringfunc = onchangestringfunc + "\"" + selectedvalue + "\")"
               }
 
-              alert("in js :::: " + onchangestringfunc)
               eval(onchangestringfunc)
 
     				});
