@@ -134,7 +134,7 @@
       @media screen and (max-width : 992px){
         div.prize_big {
           /*display: none;*/
-          margin-top: 320px;
+          margin-top: 340px;
         }
         div.prize ul li {
           padding-top: 0px;
@@ -450,6 +450,7 @@
             }
           })
           function changeSegmentValue(spanobject) {
+            alert($("#targetPeople option:selected").val())
             if ($("#targetPeople option:selected").val()=="Everybody") {
               $(".everybody_div").show()
               $(".developer_div").hide()
