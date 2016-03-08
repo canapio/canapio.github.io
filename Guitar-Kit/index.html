@@ -449,9 +449,9 @@
               $("#vimeo_iframe").attr('src', "https://player.vimeo.com/video/93062363");
             }
           })
-          function changeSegmentValue(spanobject) {
-            alert($("#targetPeople option:selected").val())
-            if ($("#targetPeople option:selected").val()=="Everybody") {
+          function changeSegmentValue(selectedvalue) {
+            alert(selectedvalue)
+            if (selectedvalue=="Everybody") {
               $(".everybody_div").show()
               $(".developer_div").hide()
             } else {

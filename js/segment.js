@@ -25,8 +25,16 @@
                   $(this).removeAttr("selected")
                 }
               })
-              alert("in js :::: " + selectedvalue)
-              eval(self.attr('onchange'))
+
+              var onchangestringfunc = self.attr('onchange')
+              if (onchangestringfunc.length > 0) {
+                onchangestringfunc = onchangestringfunc.substring(0, onchangestringfunc.length-1)
+                onchangestringfunc = onchangestringfunc + selectedvalue + ")"
+              }
+
+              alert("in js :::: " + onchangestringfunc)
+              eval(onchangestringfunc)
+
     				});
     				$(this).after(wrapper);
     				$(this).hide();
