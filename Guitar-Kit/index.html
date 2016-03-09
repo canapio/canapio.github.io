@@ -573,6 +573,7 @@
           req.open('GET', 'https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5', true);
           req.setRequestHeader('Content-Type', 'application/json');
           req.setRequestHeader('Authorization', 'Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0');
+          req.setRequestHeader('Access-Control-Allow-Origin', '*');
           req.onreadystatechange = function() {
               if (req.readyState === 4) {
                   if (req.status >= 200 && req.status < 400) {
