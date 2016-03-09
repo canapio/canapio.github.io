@@ -463,6 +463,56 @@
           </div>
 
 
+          <h2>User Reviews</h2>
+          <div id="user_review_div">
+
+          </div>
+          <style media="screen">
+            .user_review {
+              width: 100%;
+              border: solid #E1E1E1;
+              border-width: thin;
+              padding: 18px;
+              margin: 14px;
+            }
+            .user_review_title {
+              display: inline;
+              font-weight: bolder;
+              font-size: 14px;
+            }
+            .user_review_author {
+              opacity: 0.5;
+              font-size: 12px;
+            }
+            .user_review_description {
+              font-size: 12px;
+            }
+          </style>
+
+          <div class="user_review"><div class="user_review_title">
+          디자인이 일단 굳굳!!
+          <i class="fa fa-star" style="color: #FD9407;"></i><i class="fa fa-star" style="color: #FD9407;"></i><i class="fa fa-star" style="color: #FD9407;"></i><i class="fa fa-star" style="color: #FD9407;"></i><i class="fa fa-star" style="color: #FD9407;"></i></div><div class="user_review_author">작성자:
+          루**
+           -
+          2015년 10월 23일
+          </div><div class="user_review_description">
+          감각적인구성에 일단 다운받았는데 생각보다 더 좋아서 만족만족햇습니다! 어플이 간지나요
+          </div></div>
+          <script type="text/javascript">
+          $.get("demo_test.asp", function(data, status){
+              alert("Data: " + data + "\nStatus: " + status);
+          });
+          $.ajax({
+            type: 'GET',
+            url: "https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5",
+            headers: {
+              Authorization : "Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0"
+            },
+            success: function(data) {
+              alert(data)
+            }
+          })
+          </script>
 
 
 
