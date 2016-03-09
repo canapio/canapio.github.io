@@ -499,19 +499,92 @@
           감각적인구성에 일단 다운받았는데 생각보다 더 좋아서 만족만족햇습니다! 어플이 간지나요
           </div></div>
           <script type="text/javascript">
-          $.get("demo_test.asp", function(data, status){
-              alert("Data: " + data + "\nStatus: " + status);
-          });
-          $.ajax({
-            type: 'GET',
-            url: "https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5",
-            headers: {
-              Authorization : "Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0"
-            },
-            success: function(data) {
-              alert(data)
-            }
-          })
+          // $.ajax({
+          //   type: 'GET',
+          //   dataType: "jsonp",
+          //   url: "https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5",
+          //   headers: {
+          //     "Authorization" : "af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0",
+          //     // "Content-Type": "application/json",
+          //     // 'Access-Control-Allow-Origin': "*"
+          //   },
+          //   success: function(data) {
+          //     alert(data)
+          //   },
+          //   error: function(jqXHR, exception) {
+          //         if (jqXHR.status === 0) {
+          //             alert('Not connect.\n Verify Network.');
+          //         } else if (jqXHR.status == 404) {
+          //             alert('Requested page not found. [404]');
+          //         } else if (jqXHR.status == 500) {
+          //             alert('Internal Server Error [500].');
+          //         } else if (exception === 'parsererror') {
+          //             alert('Requested JSON parse failed.');
+          //         } else if (exception === 'timeout') {
+          //             alert('Time out error.');
+          //         } else if (exception === 'abort') {
+          //             alert('Ajax request aborted.');
+          //         } else {
+          //             alert('Uncaught Error.\n' + jqXHR.responseText);
+          //         }
+          //     }
+          // })
+          // $.ajaxSetup({
+            // headers : {
+            //   "Authorization" : "Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0",
+            //   'Access-Control-Allow-Origin': "*"
+            // }
+          // });
+          // $.getJSON("https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5", function(data) {
+          //   alert(data);
+          // })
+          // $.ajax({
+          //     url: 'https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews',
+          //     data: {
+          //       "countries": 'kr',
+          //       "rating": "5"
+          //     },
+          //
+          //     crossDomain: true,
+          //     dataType: 'jsonp',
+          //     headers : {
+          //       // "Authorization" : "Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0",
+          //       'Access-Control-Allow-Origin': "*",
+          //       'Accept' : "application/json"
+          //     },
+          //     beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0'); },
+          //     timeout: 5000,
+          //     error: function(e, status, settings){
+          //         alert('ERROR: '+JSON.stringify(e));
+          //     },
+          //     success: function( e, xhr, settings ) {
+          //         alert('SUCCESS: '+JSON.stringify(e));
+          //     }
+          // });
+          // $.ajaxSetup({
+          //   headers : {
+          //     'Authorization' : 'Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0'
+          //   }
+          // });
+          // $.getJSON('https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5', function(json) { alert("Success"); });
+
+
+          var req = new XMLHttpRequest();
+          req.open('GET', 'https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5', true);
+          req.setRequestHeader('Content-Type', 'application/json');
+          req.setRequestHeader('Authorization', 'Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0');
+          req.onreadystatechange = function() {
+              if (req.readyState === 4) {
+                  if (req.status >= 200 && req.status < 400) {
+                      // JSON.parse(req.responseText) etc.
+                      alert(req.responseText)
+                  } else {
+                      // Handle error case
+                  }
+              }
+          };
+          req.send();
+
           </script>
 
 
