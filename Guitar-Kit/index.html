@@ -332,46 +332,9 @@
           </p>
 
           <h2>Version History</h2>
-          <div id="version_history" style="display: none;">
-            <p>
-              <b>v2.21 (15.10.03)</b>
-              <ul>
-                <li>iOS9 지원</li>
-              </ul>
-            </p><p>
-              <b>v2.20 (15.08.13)</b>
-              <ul>
-                <li>일본어 지원</li>
-                <li>러시아어 지원</li>
-              </ul>
-            </p><p>
-              <b>v2.10 (14.09.19)</b>
-              <ul>
-                <li>iOS8 지원</li>
-                <li>iPhone6(4.7inch), iPhone6+(5.5inch) 지원</li>
-                <li>안정화</li>
-              </ul>
-            </p><p>
-              <b>v2.00 (14.05.13)</b>
-              <ul>
-                <li>4000여개의 코드 탑재</li>
-                <li>정보화면 변경</li>
-                <li>아이패드 화면 가로,세로 전환 지원</li>
-                <li>버그 제거(소리 이슈 해결)</li>
-              </ul>
-            </p><p>
-              <b>v1.10 (14.01.14)</b>
-              <ul>
-                <li>iOS6이하에서 강제종료되는 이슈 제거</li>
-              </ul>
-            </p><p>
-              <b>v1.00 (14.01.09)</b>
-              <ul>
-                <li>첫 출시</li>
-              </ul>
-            </p>
+          <div id="version_history">
           </div>
-          <a id="version_history_atag" onclick="clickVersionHistory()">펼쳐보기...</a>
+
 
 
 
@@ -464,16 +427,18 @@
 
 
           <h2>User Reviews</h2>
-          <div id="user_review_div">
-
-          </div>
+          <div id="user_review_div"></div>
           <style media="screen">
+            #user_review_div {
+              margin: 0px 14px;
+              margin-bottom: 20px;
+            }
             .user_review {
               width: 100%;
               border: solid #E1E1E1;
               border-width: thin;
               padding: 18px;
-              margin: 14px;
+              margin: 14px 0px;
             }
             .user_review_title {
               display: inline;
@@ -487,106 +452,13 @@
             .user_review_description {
               font-size: 12px;
             }
+            .gradient_fold {
+              -webkit-mask-image: -webkit-gradient(linear, left 50%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+            }
           </style>
 
-          <div class="user_review"><div class="user_review_title">
-          디자인이 일단 굳굳!!
-          <i class="fa fa-star" style="color: #FD9407;"></i><i class="fa fa-star" style="color: #FD9407;"></i><i class="fa fa-star" style="color: #FD9407;"></i><i class="fa fa-star" style="color: #FD9407;"></i><i class="fa fa-star" style="color: #FD9407;"></i></div><div class="user_review_author">작성자:
-          루**
-           -
-          2015년 10월 23일
-          </div><div class="user_review_description">
-          감각적인구성에 일단 다운받았는데 생각보다 더 좋아서 만족만족햇습니다! 어플이 간지나요
-          </div></div>
-          <script type="text/javascript">
-          // $.ajax({
-          //   type: 'GET',
-          //   dataType: "jsonp",
-          //   url: "https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5",
-          //   headers: {
-          //     "Authorization" : "af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0",
-          //     // "Content-Type": "application/json",
-          //     // 'Access-Control-Allow-Origin': "*"
-          //   },
-          //   success: function(data) {
-          //     alert(data)
-          //   },
-          //   error: function(jqXHR, exception) {
-          //         if (jqXHR.status === 0) {
-          //             alert('Not connect.\n Verify Network.');
-          //         } else if (jqXHR.status == 404) {
-          //             alert('Requested page not found. [404]');
-          //         } else if (jqXHR.status == 500) {
-          //             alert('Internal Server Error [500].');
-          //         } else if (exception === 'parsererror') {
-          //             alert('Requested JSON parse failed.');
-          //         } else if (exception === 'timeout') {
-          //             alert('Time out error.');
-          //         } else if (exception === 'abort') {
-          //             alert('Ajax request aborted.');
-          //         } else {
-          //             alert('Uncaught Error.\n' + jqXHR.responseText);
-          //         }
-          //     }
-          // })
-          // $.ajaxSetup({
-            // headers : {
-            //   "Authorization" : "Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0",
-            //   'Access-Control-Allow-Origin': "*"
-            // }
-          // });
-          // $.getJSON("https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5", function(data) {
-          //   alert(data);
-          // })
-          // $.ajax({
-          //     url: 'https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews',
-          //     data: {
-          //       "countries": 'kr',
-          //       "rating": "5"
-          //     },
-          //
-          //     crossDomain: true,
-          //     dataType: 'jsonp',
-          //     headers : {
-          //       // "Authorization" : "Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0",
-          //       'Access-Control-Allow-Origin': "*",
-          //       'Accept' : "application/json"
-          //     },
-          //     beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0'); },
-          //     timeout: 5000,
-          //     error: function(e, status, settings){
-          //         alert('ERROR: '+JSON.stringify(e));
-          //     },
-          //     success: function( e, xhr, settings ) {
-          //         alert('SUCCESS: '+JSON.stringify(e));
-          //     }
-          // });
-          // $.ajaxSetup({
-          //   headers : {
-          //     'Authorization' : 'Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0'
-          //   }
-          // });
-          // $.getJSON('https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5', function(json) { alert("Success"); });
 
 
-          var req = new XMLHttpRequest();
-          req.open('GET', 'https://api.appannie.com/v1.2/apps/ios/app/791551793/reviews?countries=kr&rating=5', true);
-          req.setRequestHeader('Content-Type', 'application/json');
-          req.setRequestHeader('Authorization', 'Bearer af49d6dfe4222f51d8bbce1eaf6bf47c5e3e3da0');
-          req.setRequestHeader('Access-Control-Allow-Origin', '*');
-          req.onreadystatechange = function() {
-              if (req.readyState === 4) {
-                  if (req.status >= 200 && req.status < 400) {
-                      // JSON.parse(req.responseText) etc.
-                      alert(req.responseText)
-                  } else {
-                      // Handle error case
-                  }
-              }
-          };
-          req.send();
-
-          </script>
 
 
 
@@ -616,6 +488,21 @@
             } else {
               $("#vimeo_iframe").attr('src', "https://player.vimeo.com/video/93062363");
             }
+
+            if (review_data["reviews"].length>2) {
+              for (var i=0; i<review_data["reviews"].length-1; i++) {
+                for (var j=i+1; j<review_data["reviews"].length; j++) {
+                  if (review_data["reviews"][i]["text"].length < review_data["reviews"][j]["text"].length) {
+                    var iobject = review_data["reviews"][i]
+                    review_data["reviews"][i] = review_data["reviews"][j]
+                    review_data["reviews"][j] = iobject
+                  }
+                }
+              }
+            }
+
+            setReviewdivWithFold(true)
+            clickVersionHistory(true)
           })
           function changeSegmentValue(selectedvalue) {
             if (selectedvalue=="Everybody") {
@@ -627,16 +514,109 @@
             }
           }
 
-          function clickVersionHistory() {
-            if ( $("#version_history").css('display') == 'none' ){
-              $("#version_history_atag").html("접기...")
-              $('#version_history').show()
-            } else {
-              $("#version_history_atag").html("펼쳐보기...")
-              $('#version_history').hide()
-            }
 
+          var version_data = [{"version":"2.21 (15.10.03)","features":["iOS9 지원"]},{"version":"2.20 (15.08.13)","features":["일본어 지원","러시아어 지원"]},{"version":"2.10 (14.09.19)","features":["iOS8 지원","iPhone6(4.7inch), iPhone6+(5.5inch) 지원","안정화"]},{"version":"2.00 (14.05.13)","features":["4000여개의 코드 탑재","정보화면 변경","아이패드 화면 가로,세로 전환 지원","버그 제거(소리 이슈 해결)"]},{"version":"1.10 (14.01.14)","features":["iOS6이하에서 강제종료되는 이슈 제거"]},{"version":"1.00 (14.01.09)","features":["첫 출시"]}]
+
+          var minimumVersionHistoryCount = 2
+          function clickVersionHistory(_isfold) {
+            if (_isfold == false || version_data.length < minimumVersionHistoryCount){
+
+
+              var html = "<div>"
+              for (var i=0; i<version_data.length; i++) {
+                html += createVersionHTML(version_data[i]["version"], version_data[i]["features"])
+              }
+              html += "</div>"
+              if (version_data.length >= minimumVersionHistoryCount) {
+                html += '<a onclick="clickVersionHistory(true);">접기</a>'
+              }
+
+              $('#version_history').html(html)
+            } else if (_isfold == true) {
+
+              var html = "<div class='gradient_fold'>"
+              for (var i=0; i<version_data.length; i++) {
+                if (i==minimumVersionHistoryCount+1) break;
+                html += createVersionHTML(version_data[i]["version"], version_data[i]["features"])
+              }
+              html += "</div>"
+
+              html += '<a onclick="clickVersionHistory(false);">펼쳐보기...</a>'
+
+
+
+              $('#version_history').html(html)
+            }
           }
+          function createVersionHTML(version, features) {
+            var html = '<p><b>v'
+              html += version
+              html += '</b><ul>'
+              for (var i=0; i<features.length; i++) {
+                html += '<li>'
+                html += features[i]
+                html += '</li>'
+              }
+              html += '</ul></p>'
+              return html
+          }
+
+
+          var review_data = {"reviews": [{"rating": 5, "reviewer": "\ub8e8\ub8e8\uc58d", "version": "2.21", "text": "\uac10\uac01\uc801\uc778\uad6c\uc131\uc5d0\n\uc77c\ub2e8 \ub2e4\uc6b4\ubc1b\uc558\ub294\ub370\n\uc0dd\uac01\ubcf4\ub2e4 \ub354 \uc88b\uc544\uc11c\n\ub9cc\uc871\ub9cc\uc871\ud587\uc2b5\ub2c8\ub2e4!\n\uc5b4\ud50c\uc774 \uac04\uc9c0\ub098\uc694", "language": null, "title": "\ub514\uc790\uc778\uc774\uc77c\ub2e8\ud83d\ude33\ud83d\udc4d\uad7f\uad7f!!", "date": "2015-10-23", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc6cc\uc640", "version": "2.12", "text": "\ub108\ubb34 \uc88b\uc740 \uc571\uc774\uc5d0\uc694 \ucf54\ub4dc \ubc30\uc6b0\ub294\ub370\ub294 \uc774\ub9cc\ud55c\uc571\uc774\uc5c6\uc740\uac70\uac19\uc544\uc5ec--!!", "language": null, "title": "\uae30\ud0c0\ub97c \ub9c9 \uc2dc\uc791\ud55c \ucd08\ubcf4\ub85c\uc368...", "date": "2015-06-27", "country": "KR", "device": null}, {"rating": 5, "reviewer": "garangnip", "version": "2.12", "text": "\uae30\ud0c0\ub97c \ub193\uace0 \uc624\ub79c\ub9cc\uc5d0 \ub2e4\uc2dc \uc7a1\uc744 \uacb8 \ubc1b\uc558\ub294\ub370 \uc774\ub807\uac8c \uc88b\uc744\uc218\uac00 \uc5c6\ub124\uc694. \uac10\uc0ac\ud569\ub2c8\ub2e4. \uace0\ub9d9\uc2b5\ub2c8\ub2e4.", "language": null, "title": "\ucd94\ucc9c\ud569\ub2c8\ub2e4.", "date": "2015-06-13", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\ubcc4\uba85 \uc788\uc5b4\uc57c \ud558\ub098 \ubcc4\uba85", "version": "2.12", "text": "\ucf54\ub4dc\uac00 \ub2e4\uc591\ud574\uc11c \uc88b\uc2b5\ub2c8\ub2e4\n\ud558\uc9c0\ub9cc \uc77c\uc77c\ud788 \ud0a4\ubcf4\ub4dc\uac00 \ub728\ub294 \uac83\ubcf4\ub2e8 \ud654\uba74\uc5d0 \uae30\ubcf8 \ucf54\ub4dc\ub9cc\uc774\ub77c\ub3c4 \ubc84\ud2bc\uc774 \ub5a0\uc11c (C\ubd80\ud130 B\uae4c\uc9c0, \uc0fb\uc774\ub098 \ud50c\ub7ab\uac19\uc740) \uc880 \ub354 \uac04\ud3b8\ud788 \uc774\ub3d9\ud560 \uc218 \uc788\uc74c \uc88b\uaca0\uc5b4\uc694", "language": null, "title": "\uc88b\uc544\uc694!!", "date": "2015-05-27", "country": "KR", "device": null}, {"rating": 5, "reviewer": "Vokun3685", "version": "2.1", "text": "\uc77c\ub2e8 \ub514\uc790\uc778\uc774 \uc138\ub828\ub42c\uace0 \uae54\ub054\ud558\uace0\uc694, \ucf54\ub4dc \ucc3e\uc744\ub54c \ud3b8\ud558\ub124\uc694.", "language": null, "title": "\ub9cc\uc871\ud569\ub2c8\ub2e4", "date": "2015-01-03", "country": "KR", "device": null}, {"rating": 5, "reviewer": "^\u3161^", "version": "2.1", "text": "\uae54\ub054\ud558\uace0 \ud65c\uc6a9\ub3c4\uac00 \ub192\uc544\uc11c \uc88b\uae34\ud55c\ub370\n\n\uac00\ub85c\ubaa8\ub4dc\uac00 \uc801\uc6a9\ub418\uba74 \uc88b\uc744 \uac83 \uac19\uc2b5\ub2c8\ub2e4.", "language": null, "title": "\uac00\ub85c\ubaa8\ub4dc \uc801\uc6a9\ud574\uc8fc\uc138\uc694", "date": "2014-12-30", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc5d0\uc138\ud504\ud2f0", "version": "2.1", "text": "\uba54\ud2b8\ub85c\ub188\uc774 \ubc15\uc790\ub97c \uc808\uc5b4\uc694 \u314b\u314b\u314b\u314b\u314b", "language": null, "title": "\uc77c\ub2e8 \ubcc4 5\uac1c \uc778\ub370", "date": "2014-11-27", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uaf43\uaf43\ud55c\ub188", "version": "Unknown", "text": "\uc774\ub7f0 \uc644\uc131\ub3c4\ub97c \ubcf4\uc5ec\uc8fc\uc2dc\ub2c8 \ub180\ub78d\uc2b5\ub2c8\ub2e4!", "language": null, "title": "\uc778\ub514 \uac1c\ubc1c\uc790\uac00", "date": "2014-11-22", "country": "KR", "device": null}, {"rating": 5, "reviewer": "damine46", "version": "Unknown", "text": "\ucf54\ub4dc\uac80\uc0c9\uc774 \uac00\ub2a5\ud558\uace0 \ud558\uc5ec\ud2bc \uc800\ud55c\ud14c \ub108\ubb34 \uc798\ub9de\ub294 \uc571\uc774\ub124\uc694..\uae30\ud0c0\ucf54\ub4dc \uc571\uc911\uc5d0\uc11c \uc81c\uc77c \uc88b\uc740\uac83 \uac19\uc544\uc694", "language": null, "title": "\uc644\ubcbd\ud558\ub124\uc694", "date": "2014-11-22", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\ubca0\uc2a4\ud30c\ub098\ub4e4\uc774", "version": "Unknown", "text": "\uc778\ud130\ud398\uc774\uc2a4\ub098 \uadf8\ub798\ud53d\uc774 \ucc28\ubd84\ud558\uace0 \uc0ac\uc6a9\uc790\uac00 \uc27d\uac8c \uc4f8\uc218 \uc788\uac8c \uc798 \ub9cc\ub4e4\uc5b4\uc8fc\uc2e0\ub4ef. \uadfc\ub370 \ud551\uac70\ub9c1\uc5d0\uc11c \uc6b4\uc9c0\ud310 \ubcf4\uc5ec\uc8fc\uc2e4\ub54c \uac00\ub85c\ubaa8\ub4dc\uac00 \ub418\uba74 \uc88b\uc744 \uac83 \uac19\ub124\uc694. \uadf8\ub9ac\uace0 \ub9c8\uc774\ucf54\ub4dc\uc5d0\uc11c \ub514\ud3f4\ud2b8\ud3f4\ub354 \uc678\uc5d0 \ucd94\uac00 \ubc84\ud2bc\uc744 \uc548\ub204\ub974\uace0 \uadf8\ub0e5 \ub098\uac00\ub824\uace0 \ud558\ub294\ub370 \ub098\uac00\ub294 \ubc84\ud2bc\uc774 \uc5c6\ub354 \uad70\uc694. \ub2f9\ud669\ud588\ub294\ub370 edit \ubc84\ud2bc \ub20c\ub7ec\uc11c \ud558\ub098 \uc0dd\uc131\ud558\ub824\ub2e4 \ub9d0\uba74 \ub4a4\ub85c\uac00\uae30 \ubc84\ud2bc\uc774 \ub098\uc624\ub354\uad70\uc694. \uc218\uc815\ud574\uc57c\ud560 \ubd80\ubd84\uc778\ub4ef\ud569\ub2c8\ub2e4. \uadf8\uac83 \uc678\uc5d4 \uc804\ubc18\uc801\uc73c\ub85c \uc2e0\uacbd\uc138\uc138\ud788 \uc4f0\uc2e0\ub4ef!! \ud2b9\ud788 \ud2b8\ub808\uc774\ub2dd\uc740 '\uc2e0\uc758 \ud55c \uc218' \uc5d0\uc694.", "language": null, "title": "\uae30\ud0c0\uc571\uc911 \uac00\uc7a5 \ud65c\uc6a9\ub3c4\uac00 \uc88b\uc740\uac83 \uac19\uc2b5\ub2c8\ub2e4", "date": "2014-11-22", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\ubd88\uc0b4\ub77c", "version": "2.00", "text": "\ud29c\ub2dd\uae30\ub2a5\uc774 \ucd94\uac00\ub418\uba74..\uc9c4\uc9dc \uae30\ud0c0\uad00\ub828 \uba85\ud488 \uc571\uc73c\ub85c\uac70\ub4ed\ub0a0\uac70\uac19\uc74c!!!", "language": null, "title": "\uc88b\uc2b5\ub2c8\ub2e4! \uc88b\uad6c\uc694~", "date": "2014-09-15", "country": "KR", "device": null}, {"rating": 5, "reviewer": "hanah1230", "version": "2.00", "text": "\ucd1d $2.99 \ub098\uac14\ub294\ub370 \uc5b4\ub514\ub2e4\uac00 \ud655\uc778\ud574\uc57c\ud574\uc694?", "language": null, "title": "$1 \ub354 \ub098\uac14\uc5b4\uc694", "date": "2014-07-22", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc5d0\uc78c\u314b\u314b", "version": "2.00", "text": "\uc6d0\ud558\ub294 \ucf54\ub4dc \uc815\ud574\ub193\uace0 \uba54\ud2b8\ub85c\ub214\uc5d0 \ub9de\ucdb0\uc11c \uce58\uac8c \ud558\ub294\uac83\ub3c4 \uac00\ub2a5\ud558\ub124\uc5ec \u314e\u3137;;\uac1c\uca54\uc74c \uc774\uac70 \uadfc\ub370 \uc5b4\ucfe0\uc2a4\ud2f1 \ucf54\ub4dc\ub9cc \uc788\ub294\uac70\uac19\uc544\uc5ec. \uc77c\ub809\uae30\ud0c0\ub294 \ubc30\uc6b0\ub824\uace0 \ud558\ub294\ub370 \ud30c\uc6cc\ucf54\ub4dc \ub530\ub85c \ub9cc\ub4e4\uc5b4\uc8fc\uc2dc\ub294\uac83\ub3c4 \ucc38 \uac10\uc0ac\ud558\uaca0\uc5b4\uc6a4 \u314e\u314e\u314e\u314e\ud30c\uc6cc\ucf54\ub4dc\ub3c4 \uc26c\uc6b4\uac70\uc9c0\ub9cc \ud639\uc2dc \uac00\ub2a5\ud558\uc2dc\ub2e4\uba74..?\u314e", "language": null, "title": "\uae30\ud0c0 \uc5f0\uc8fc\ud558\ub294 \uc0ac\ub78c\uc774\ub77c\uba74 \ud544\uc218\ub124\uc5ec", "date": "2014-07-08", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uafc8\uafb8\ub294\uc628\ub2ec", "version": "2.00", "text": "\uc54c\uc544\ubcf4\uae30 \uc26c\uc6b4 \ucf54\ub4dc \ubcf4\ub2e8 \ubcf5\uc7a1\ud78c \ucf54\ub4dc\ub4e4\uc774 \ub9ce\uc774 \uc788\uc5b4\uc11c \ub2e4\ub978\uc571\ubcf4\ub2e8 \ud655\uc2e4\ud788 \uc88b\ub124\uc694!! \uac15\ucd94\uc785\ub2c8\ub2f7!!", "language": null, "title": "\ucd08\ubcf4\uc790\ub4e4\ubcf4\ub2e8 \uace0\uc218\ubd84\ub4e4\uaed8 \ucd94\ucc9c!!!", "date": "2014-07-05", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc724\ud0dd", "version": "2.00", "text": "\uc624\ud508\ucf54\ub4dc, \ud074\ub85c\uc988 \ucf54\ub4dc \ud56d\ubaa9\ub3c4 \ub530\ub85c \ub9cc\ub4e4\uc5b4\uc838 \uc788\uc73c\uba74 \ucc38 \ub354 \uc7ac\ubbf8\uc788\uc744\ub4ef \ud558\ub124\uc694~", "language": null, "title": "\uc81c\uac00 \uc368\ubcf8 \ucf54\ub4dc \uc5b4\ud50c\uc911 \ucd5c\uace0 \ud3b8\ub9ac", "date": "2014-06-27", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc775\uba8583957363", "version": "2.00", "text": "\uc798\uc4f8\uac8c\uc694~\ub9ce\uc774\ub9cc\ub4e4\uc5b4\uc8fc\uc138\uc694 \u314b\u314b", "language": null, "title": "\ub9cc\uc871\ud569\ub2c8\ub2e4", "date": "2014-06-13", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uac00\uc628\uc560\ube44", "version": "2.00", "text": "\uc624 \ub531  \ud544\uc694\ud55c \uae30\ub2a5\ub9cc \uc788\ub124\uc694~~UI\ub514\uc790\uc778\ub3c4 \uc774\uc058\uace0 \uc644\uc804 \uc798\uc4f8\uaed8\uc694~~^^", "language": null, "title": "\uceac~~ \ub300\ubc15~!", "date": "2014-05-15", "country": "KR", "device": null}, {"rating": 5, "reviewer": "LEH5237", "version": "2.00", "text": "\ub2e4\ub978 \ub9d0\uc740 \ud544\uc694\uc5c6\uc74c", "language": null, "title": "\uc544\uc8fc\uc88b\uc74c", "date": "2014-05-14", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc724\ub450\uaebc\ube44", "version": "2.00", "text": "\uae30\ud0c0\uce58\uc2dc\ub294\ubd84\ub4e4 \uad6c\ub9e4\ud558\uc138\uc6a9 \u314b\u314b", "language": null, "title": "\uc88b\ub124\uc694 \u314b\u314b", "date": "2014-05-14", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\ucd5c\ub450\uc6c5", "version": "2.00", "text": "\uc815\ub9d0 \uc88b\uc740 \uc571\uac19\uc2b5\ub2c8\ub2e4", "language": null, "title": "\uc608\uc058\uace0 \uc720\uc6a9\ud558\uace0 \uc9c1\uad00\uc801\uc778\uc571", "date": "2014-05-13", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc5ff\uc591\uac31", "version": "2.00", "text": "\uc815\ub9d0 \uc88b\uc2b5\ub2c8\ub2e4", "language": null, "title": "\uc88b\uc544\uc694", "date": "2014-05-13", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uba85\ud488\uc624\uc9d5\uc5b4", "version": "2.00", "text": "\uc798 \uc4f0\uaca0\uc2b5\ub2c8\ub2e4 ~~", "language": null, "title": "\uc815\ub9d0 \uc88b\uc740 \uc5b4\ud50c\uc778\uac70\uac19\uc544\uc694", "date": "2014-05-13", "country": "KR", "device": null}, {"rating": 5, "reviewer": "itisamine", "version": "2.00", "text": "\ud6cc\ub96d\ud55c\uc571\uc785\ub2c8\ub2e4", "language": null, "title": "\ud6cc\ub96d\ud569\ub2c8\ub2e4", "date": "2014-05-13", "country": "KR", "device": null}, {"rating": 5, "reviewer": "jjhft", "version": "2.00", "text": "\uc548\uc0ac\uc6a9\ud574 \ubcf4\uc168\uc73c\uba74 \ub9d0\uc744 \ud558\uc9c0\ub9c8\u314b \ub355\ubd84\uc5d0 \uc608\uc804\uc5d0 \ubc30\uc6b0\ub2e4 \uc2dc\uac04\uc801 \uc5ec\uc720\uac00 \ubd80\uc871\ud574 \ub193\uac8c \ub418\uc5c8\ub358 \uc545\uae30\ub97c \ub2e4\uc2dc \uc5f0\uc2b5\ud558\uac8c \ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uac10\uc0ac\ud569\ub2c8\ub2e4.", "language": null, "title": "\uc0ac\uc6a9\ud574 \ubcf4\uc168\ub098\uc694?", "date": "2014-05-13", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc610\ub85c\ud6c4", "version": "1.10", "text": "\uc5ec\ud0dc \ubc1b\uc740\uac70 \uc911\uc5d0 \ucd5c\uace0\uc5ec\uc624  !!!!!", "language": null, "title": "\uc88b\uc2b5\ub2c8\ub2e4", "date": "2014-01-18", "country": "KR", "device": null}, {"rating": 5, "reviewer": "canapio", "version": "1.10", "text": "\uc774\ubc88 1.1\uc5c5\ub370\uc774\ud2b8\ub97c \ud558\uc2e0 iOS7 \uc720\uc800\ubd84\ub4e4\uaed8\uc11c \ud305\uae34\ub2e4\ub294 \uc815\ubcf4\ub97c \ubc1b\uc558\uc2b5\ub2c8\ub2e4. \uc9c0\uc6e0\ub2e4 \uae54\uba74 \uc815\uc0c1\uc791\ub3d9\ud55c\ub2e4\uace0\ud569\ub2c8\ub2e4\ub9cc.. \uc544\uc9c1 \uc815\ubcf4\uac00 \uc801\uc5b4\uc11c \ubc84\uadf8\ub97c \ubabb\uc7a1\uace0 \uc788\uc2b5\ub2c8\ub2e4.\u3160\u3160\ud53c\ub4dc\ubc31\uc740 \uba54\uc77c, \ud398\uc774\uc2a4\ubd81\uc5d0 \ub0a8\uaca8\uc8fc\uc2dc\uba74 120% \ud65c\uc6a9\ud574\uc11c \ubc84\uadf8\ub97c \uc7a1\uc544\ubcf4\uaca0\uc2b5\ub2c8\ub2e4.\uac10\uc0ac\ud569\ub2c8\ub2e4.", "language": null, "title": "\uc548\ub155\ud558\uc138\uc694 \uac1c\ubc1c\uc790\uc785\ub2c8\ub2e4", "date": "2014-01-16", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc548\uc0b0\ubca0\uc774\uc2a4", "version": "1.10", "text": "\uae30\ud0c0 \ucf54\ub4dc\uc571 \uc67c\ub9cc\ud55c\uac74 \ub2e4 \ub3c8\uc8fc\uace0 \ubc1b\uc544\ubd24\ub294\ub370.. \uc774\uac83\ub9cc\ud07c \uad1c\ucd98\ud55c\uac74 \uc5c6\uc5c8\uc74c ! \ucd94\ucc9c", "language": null, "title": "\uc88b\ucfe4", "date": "2014-01-16", "country": "KR", "device": null}, {"rating": 5, "reviewer": "helloran", "version": "1.10", "text": "\uac10\uc0ac\ud574\uc11c \ub0a8\uae41\ub2c8\ub2e4~ \uae30\ud0c0\ucd08\ubcf4\uc790\uc5d0\uac90 \ucf54\ub4dc\uc678\uc6b0\uace0 \uc5f0\uc2b5\ud558\uae30\uc5d0 \ub531\uc774\ub124\uc694 :-) \uac10\uc0ac\ud574\uc694~!", "language": null, "title": "\ub9ac\ubdf0\ub77c\ub294\uac70 \ud55c \ubc88\ub3c4 \uc548\uc368\ubd24\ub294\ub370", "date": "2014-01-14", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\ub958\uad6c\ub2c8", "version": "1.10", "text": "\uad7f\uad7f", "language": null, "title": "\uad7f", "date": "2014-01-14", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uade4\uc131", "version": "1.10", "text": "\ud798\ub4e4\uac8c \uc0dd\uac01\ud560\ud544\uc694\uc5c6\uace0 \uc88b\uc18c", "language": null, "title": "\uc9c4\uc9dc \uc88b\uc74c\uc694", "date": "2014-01-14", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\ub108\ubb34\ub108\ubb34\ub108\ubb34\ub108\ubb34\ub108\ubb50\ub204\uba38\ub204", "version": "1.00", "text": "\ud55c\uae00\ub85c\uc880\ud574\uc8fc\uc2dc\uba74 \uc548\ub418\ub098\uc694...\u3160", "language": null, "title": "\ub2e4 \uc88b\uc9c0\ub9cc", "date": "2014-01-13", "country": "KR", "device": null}, {"rating": 5, "reviewer": "rstar2001", "version": "1.00", "text": "\uae30\ud0c0\ub97c \uc804\uacf5\ud558\uace0 \ub808\uc2a8\ud558\ub294 \uc0ac\ub78c\uc785\ub2c8\ub2e4 \uc5ec\ub7ec\uac00\uc9c0 \uae30\ud0c0\ucf54\ub4dc\uc571\uc744 \uc368\ubd24\ub294\ub370 \ub514\uc790\uc778 \uad6c\uc131 \uc644\uc131\ub3c4 \ubaa8\ub450\uac00 \ucd5c\uace0\uc758 \uc571\uc778\ub4ef \ud569\ub2c8\ub2e4^^", "language": null, "title": "\uae30\ud0c0\ucf54\ub4dc\uc571\uc911 \ucd5c\uace0\uc758 \uc571", "date": "2014-01-13", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc5d0\ub9ac\ub974\ube14\ub791", "version": "1.00", "text": "UI\uc640 \uae30\ub2a5\uc774 \ub9d8\uc5d0 \ub4e4\uc5b4\uc694 \ud558\uc9c0\ub9cc \uc74c\ub7c9 \uc870\uc808\uc744 \ubca8\uc18c\ub9ac \ud06c\uae30 \ub9d0\uace0 \ubbf8\ub514\uc5b4 \ubcfc\ub968\uc73c\ub85c \uc870\uc808 \uac00\ub2a5\ud558\uac8c \ub410\uc73c\uba74 \uc88b\uaca0\ub124\uc694", "language": null, "title": "\ucd5c\uace0", "date": "2014-01-12", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc0ac\uacfc\uac00\uadf8\ub824\uc838\uc788\ub124", "version": "1.00", "text": "ios7\uc5d0 \ub9de\ub294 \ub108\ubb34 \uc608\uc05c \ub514\uc790\uc778\uacfc\ucf54\ub4dc\ub3c4 \ub2e4 \ub098\uc624\uace0 \uac80\uc0c9\ub3c4 \ud3b8\ud558\uace0!\uba54\ud2b8\ub85c\ub188\ub3c4... \uc788\uc744\uac70 \ub2e4 \uc788\uc9c0\ub9cc\ud2b9\ud788 \ubb34\uc791\uc704 \ucf54\ub4dc\ub85c \ud2b8\ub808\uc774\ub2dd \ud560 \uc218 \uc788\ub294\uac70 \ub118 \uc88b\ub124\uc694\u314e\u314e\uc2e0\uc120!!", "language": null, "title": "\uc9f1\uc774\uc5d0\uc694!!", "date": "2014-01-12", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\ub355\uad6c\uc11d\uac15", "version": "1.00", "text": "\uc774\ubc88\uc5d0 \ud551\uc2a4\uce74\ud398 \uac14\ub2e4\uac00 \uc54c\uac8c\ub42c\uc2b5\ub2c8\ub2e4~~~ \uc815\ub9d0 \uc88b\uc740 \ud504\ub85c\uadf8\ub7a8 \uac10\uc0ac\ud569\ub2c8\ub2e4~~~^^", "language": null, "title": "\ud551\uc2a4\uce74\ud398\ub355\uc5d0 \uc54c\uc558\ub124\uc694~~^^ \uc88b\uc740\uc571", "date": "2014-01-12", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc300\ubc25feat\ubc14\uad6c\ubbf8", "version": "1.00", "text": "\uc560\ud50c \uc790\uccb4\uc571\uc774\ub77c\uace0 \ud574\ub3c4 \ubbff\uc744\uc815\ub3c4\uc758 \uc2ec\ud50c\ud568 \uae30\ub2a5\ub3c4 \ub9d8\uc5d0 \ub4e4\uace0\uc694 \uc77c\uc778\uac1c\ubc1c\uc790\ub77c\ud558\uc167\ub294\ub370 \ud654\uc774\ud305\uc785\ub2c8\ub2e4", "language": null, "title": "\uc0c1\ub2f9\ud788 \uad1c\ucc2e\ub124\uc694", "date": "2014-01-12", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc6b0\uc624\uc544\uc624\uc5b4\uc624\uc624\uad73", "version": "1.00", "text": "\uc815\ub9d0 \uc774\ub807\uac8c \uc88b\uc740 \uae30\ud0c0 \uc571\uc740 \ucc98\uc74c\uc774\uc5d0\uc694!! \uac10\uc0ac\ud569\ub2c8\ub2e4!!!", "language": null, "title": "\uc9c4\uc2ec \uc774\uac74 \ud314\uc544\uc57c \ud558\ub294\uac70", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "vMAHOv", "version": "1.00", "text": "\uad1c\ucc2e\uc740 \uac83 \uac19\uc544\uc694.\uadf8\ub7f0\ub370~\ubcfc\ub968\uc870\uc808\uc774 \uc544\uc608 \ub418\uc9c8 \uc54a\ub294 \ub2e8\uc810\uc774 \uc788\ub294\ub370 \uc774\uac83\ub9cc \uc218\uc815\ud574\uc8fc\uc2dc\uba74 \uc544\uc8fc \uc88b\uc744 \uac83 \uac19\uc544\uc694 ^.^", "language": null, "title": "\ud760,,,,", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "87mmmm", "version": "1.00", "text": "UI\ub3c4 \uc608\uc058\uace0 \ud3b8\ud558\uace0 \ubcf4\uae30\ub3c4 \uc88b\ub124\uc694~ \uc798\uc4f8\uac8c\uc6a9", "language": null, "title": "\uc88b\uc544\uc694~", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc544\uc8fc\uad7f\u314b\u314b", "version": "1.00", "text": "\uc774\uc5b4\ud50c\uc9f1 \uac15\ucd94\uc784", "language": null, "title": "\uae30\ud0c0\uac00 \ub9c9 \uce58\uace0 \uc2f6\uc5b4\uc838\uc694", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "OkGoMan", "version": "1.00", "text": "\uc778\ud130\ud398\uc774\uc2a4\ub3c4 \uc815\ub9d0 \uc774\uc058\uace0\uc0ac\uc6a9\ud558\uae30\ub3c4 \ud3b8\ud558\uace0 \uc5f0\uc2b5 \ud560 \uc218 \uc788\ub294 \uc2dc\uc2a4\ud15c\ub3c4 \uc798 \ub418\uc5b4 \uc788\uad6c\uc694\uc545\uae30\uce58\ub294 \uc0ac\ub78c\uc5d0\uac8c \uaf2d \ud544\uc694\ud55c \uba54\ud2b8\ub85c\ub188 \uae30\ub2a5\uc5d0 \u314e  \ud544\uc694\ud55c \uac83\ub9cc \ub531\ub531 \ub9de\ucdb0\ub123\uc73c\uc168\ub124\uc694 \uac83\ub450 \uc774\uc058\uac8c \u314e\u314e \uc798 \uc4f8\uac8c\uc694 :)", "language": null, "title": "\uc640 \uc815\ub9d0 \ub9c8\uc74c\uc5d0 \ub4ed\ub2c8\ub2e4!!", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc6b0\ub204\uc6b0", "version": "1.00", "text": "UI\ub3c4 \uc644\uc804 \uae54\ub054\ud574\uc11c \ub108\ubb34 \uc88b\uace0, \ud63c\uc790 \uae30\ud0c0\ub97c \ub3c5\ud559\ud558\uae30\uc5d0 \ucf54\ub4dc\uc7a1\ub294 \ubc95 \uc124\uba85\ub3c4 \uc27d\uace0 \uc790\uc138\ud558\uac8c \ub418\uc5b4\uc788\uc5b4\uc11c \ub108\ubb34 \uc88b\ub124\uc694!!! \uc55e\uc73c\ub85c\ub3c4 \uafb8\uc900\ud55c \uc5c5\ub370\uc774\ud2b8 \ubd80\ud0c1\ub4dc\ub824\uc694^^", "language": null, "title": "\uc9c4\uc9dc \uc88b\uc544\uc694", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "082177", "version": "1.00", "text": "\uc800 \uac19\uc740 \ucd08\ubcf4\uc790\ub4e4\uc774 \uad81\uae08\ud588\ub358 \ubaa8\ub4e0 \uc815\ubcf4\ub4e4\uc774 \uc788\ub124\uc694", "language": null, "title": "\ub108\ubb34 \uc88b\uc544\uc694~", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "zzony", "version": "1.00", "text": "\uac10\uc131\uc744 \uc790\uadf9\ud558\ub294 \ub514\uc790\uc778\uc774 \uc774\ub124\uc694\ub514\uc790\uc778\uc5d0 100\uc810 \ub9cc\uc810 \ub4dc\ub9ac\uace0 \uc2f6\uc5b4\uc694\uc774\uac83\uc800\uac83 \uac74\ub4dc\ub9ac\uace0 \uc788\ub294\ub370 \uae30\ud0c0\uc5d0 \ub300\ud55c \uc9c0\uc2dd\uc218\uc900\uc774 \ud0dc\uc544\uae09\uc774\ub77c \ub458\ub7ec\ubcf4\uba74\uc11c \uc798 \ubc30\uc6b0\uaca0\uc2b5\ub2c8\ub2e4", "language": null, "title": "\uc88b\uc544\uc694 \u314e\u314e\u314e \uae30\ub2a5\uacfc\ub514\uc790\uc778\uc774", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\ucc2c\ub300\ub514", "version": "1.00", "text": "\uc798\uc4f8\uaed8\uc694", "language": null, "title": "\uc88b\uc740\uc571 \uac10\uc0ac\ud569\ub2c8\ub2e4", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc288\uc6b0.J", "version": "1.00", "text": "\uc720\uc800 \uc778\ud130\ud398\uc774\uc2a4\ub3c4 \uc798 \ub418\uc5b4\uc788\uace0 \ub9ce\uc740 \uae30\ud0c0\ucf54\ub4dc\ub3c4 \ub4e4\uc5b4\uac00 \uc788\uc5b4\uc11c\uc88b\uc544\uc694. \uadf8\ub9ac\uace0 \uba54\ud2b8\ub85c\ub188\uc744 \ud0a4\uace0 \uac80\uc0c9\ud558\uba74\uc11c \uc5f0\uc2b5\ud574 \ubcfc \uc218 \uc788\uc5b4\uc11c \uc88b\uc558\uc2b5\ub2c8\ub2e4.\ucd08\ubcf4\uc790\ub97c \uc704\ud55c \uc5f0\uc2b5\ucf54\ub4dc\ub3c4 \uc81c\uacf5\ub418\ub294\uac8c \uc88b\ub354\uad70\uc694!\u314e\u314e\uae30\ud0c0 \uc548 \uc7a1\uc740\uc9c0 \uc624\ub798\ub418\uc5c8\ub294\ub370 \ub2e4\uc2dc\ud55c\ubc88 \ud574\ubcf4\uac8c \ub418\ub124\uc694 \uac10\uc0ac\ud569\ub2c8\ub2e4.!", "language": null, "title": "\uc798 \ub9cc\ub4dc \uc168\ub124\uc694!", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "Apalsjnehwlsl", "version": "1.00", "text": "\uc815\ub9d0 \uc88b\ub124\uc694!!!!\ub108\ubb34 \uc720\uc6a9\ud55c \uc5b4\ud50c\uc774\ub124\uc694~~!!!", "language": null, "title": "\uad73!", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "\uc5d4\ud2b8\ub974\ud53c", "version": "1.00", "text": "\ubb34\uc5c7\ubcf4\ub2e4\ub3c4 \uc571 \ub514\uc790\uc778\uc774 ios7\uc5d0 \ub9de\uac8c\ub054 \uae54\ub054\ud558\uace0 \ubcf4\uae30\uc88b\uad6c\uc694,\uc571\uc758 \uae30\ub2a5\ub3c4 \ubaa8\ub450 \ub0b4\uc2e4\uc788\uace0 \uc88b\uc2b5\ub2c8\ub2e4.", "language": null, "title": "\uc88b\uc544\uc694!", "date": "2014-01-11", "country": "KR", "device": null}, {"rating": 5, "reviewer": "1\uc22d2", "version": "1.00", "text": "Dadgad\ud29c\ub2dd\uc744 \ucc3e\uc544\ubcf4\uae30\uc5b4\ub824\uc6df\ub294\ub370 \uc27d\uac8c\ucc3e\uc744\uc218\uc788\uc5b4 \uc88b\uc2b5\ub2c8\ub2e4", "language": null, "title": "\uc88b\uc2b5\ub2c8\ub2e4!!", "date": "2014-01-11", "country": "KR", "device": null}], "page_index": 0, "code": 200, "prev_page": null, "next_page": null, "page_num": 1, "product_name": "Guitar Kit+ for Chord Search, Save and Training"}
+
+          function createUserReviewHTML(title, ratenumber, author, date, description) {
+            if (author=="canapio") return ""
+            var html = '<div class="user_review"><div class="user_review_title">'
+            html += title + " "
+            for (var i=0; i<ratenumber; i++) {
+              html += '<i class="fa fa-star" style="color: #FD9407;"></i>'
+            }
+            html += '</div><div class="user_review_author">작성자:'
+            if (author.length>2) {
+              author = author.substring(0, author.length-2) + "**"
+            } else if (author.length>1) {
+              author = author.substring(0, author.length-1) + "*"
+            } else if (author.length==1) {
+              author = "*"
+            }
+            html += author
+            html += ' -'
+            if (date.split('-').length>0) html += " " + date.split('-')[0] + "년"
+            if (date.split('-').length>1) html += " " + date.split('-')[1] + "월"
+            if (date.split('-').length>2) html += " " + date.split('-')[2] + "일"
+            html += '</div><div class="user_review_description">'
+            html += description
+            html += '</div></div>'
+
+            return html
+          }
+
+          var minimumReviewCount = 2
+          var isfold = false
+          function setReviewdivWithFold (_isfold) {
+            isfold = _isfold
+            if (_isfold == true && review_data["reviews"].length > minimumReviewCount) {
+              var reviewHTML = '<div class="gradient_fold">'
+              for (var i=0; i<review_data["reviews"].length; i++) {
+                var review = review_data["reviews"][i]
+                if (i>minimumReviewCount) continue;
+                reviewHTML += createUserReviewHTML(review["title"], 5, review["reviewer"], review["date"], review["text"])
+              }
+              reviewHTML += '</div>'
+              reviewHTML += '<a onclick="setReviewdivWithFold(false);">펼쳐보기...</a>'
+              $("#user_review_div").html(reviewHTML)
+            } else {
+              var reviewHTML = '<div>'
+              for (var i=0; i<review_data["reviews"].length; i++) {
+                var review = review_data["reviews"][i]
+                reviewHTML += createUserReviewHTML(review["title"], 5, review["reviewer"], review["date"], review["text"])
+              }
+              reviewHTML += '</div>'
+              if (review_data["reviews"].length>minimumReviewCount) {reviewHTML += '<a onclick="setReviewdivWithFold(true);">접기</a>'}
+              $("#user_review_div").html(reviewHTML)
+            }
+          }
+
           </script>
 
           <!-- 개발자 외의 사람들을 위한 소개 글 -->
