@@ -34,7 +34,7 @@ $(function () {
           console.log(e.type);
         },
         transition: false,
-        movable: false,
+        // movable: false,
         rotatable: false
       };
 
