@@ -1,0 +1,227 @@
+div.prize {
+
+}
+div.prize ul {
+  opacity: 0.6;
+  list-style-type: none;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+div.prize ul li {
+  padding-top: 8px;
+  padding-right: 10px;
+}
+div.prize ul img {
+  vertical-align: middle;
+}
+div.prize ul div {
+  font-weight: bolder;
+  width: 160px;
+  display:inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+div.prize_big {
+  position: absolute;
+  margin-top: 50px;
+  text-align: right;
+  width: 100%;
+}
+div.prize_small {
+  display: none;
+}
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+p {
+  font-family: 'Nanum Gothic', serif;
+}
+.title {
+  font-size: 88px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  margin-top: 120px;
+}
+.description {
+  margin-top: -20px;
+  margin-left: -10px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+.appicon {
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+.appicon img {
+  width: 200px;
+  height: auto;
+}
+
+
+.bodydiv {
+  /*padding-top: 100px;*/
+}
+
+
+footer {
+  margin-top: 70px;
+  padding: 50px 0;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.footerul li {
+  display: inline;
+}
+.footerul a {
+  font-size: 18px;
+  margin: 0 15px;
+}
+
+a.footer_a_tag:link {
+  color: #513926;
+}
+a.footer_a_tag:visited {
+  color: #513926;
+}
+a.footer_a_tag:hover {
+  color: #7F593C;
+}
+
+
+.image_div {
+  margin-left: 25px; margin-right: 25px;
+}
+.storyboard_img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 22px;
+}
+
+
+
+
+.vimeo_container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin-bottom: 40px;
+}
+.vimeo_iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#user_review_div {
+  margin: 0px 14px;
+  margin-bottom: 20px;
+}
+.user_review {
+  width: 100%;
+  border: solid #E1E1E1;
+  border-width: thin;
+  padding: 18px;
+  margin: 14px 0px;
+}
+.user_review_title {
+  display: inline;
+  font-weight: bolder;
+  font-size: 14px;
+}
+.user_review_author {
+  opacity: 0.5;
+  font-size: 12px;
+}
+.user_review_description {
+  font-size: 12px;
+}
+.gradient_fold {
+  -webkit-mask-image: -webkit-gradient(linear, left 50%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+}
+
+
+
+@media screen and (max-width : 992px){
+  div.prize_big {
+    /*display: none;*/
+    margin-top: 340px;
+  }
+  div.prize ul li {
+    padding-top: 0px;
+    padding-right: 0px;
+  }
+  div.prize ul img {
+    transform: scale(0.7);
+  }
+  div.prize ul div {
+    font-weight: bolder;
+    font-size: 12px;
+    width: 140px;
+  }
+}
+
+@media screen and (max-width : 768px){
+  div.prize_big {
+    display: none;
+  }
+  div.prize {
+
+  }
+  div.prize_small {
+    display:block;
+    text-align: center;
+  }
+  div.prize ul {
+    padding: 0px;
+    padding-top: 40px;
+  }
+  div.prize ul li {
+    padding-top: 0px;
+    padding-right: 0px;
+  }
+
+  .title {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 62px;
+  }
+  .description {
+    margin-top: -60px;
+    margin-left: 25px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .appicon {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .appicon img {
+    width: 100px;
+    height: auto;
+  }
+
+  .bodydiv {
+    padding-left: 25px;
+    padding-right: 25px;
+    /*padding-top: 100px;*/
+  }
+
+  .image_div {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+}
