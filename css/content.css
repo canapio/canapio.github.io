@@ -32,9 +32,20 @@ div.prize_small {
   display: none;
 }
 
+
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 p {
   font-family: 'Nanum Gothic', serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 180%;
+}
+h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: #444;
 }
 .title {
   font-size: 88px;
@@ -104,13 +115,16 @@ a.footer_a_tag:hover {
 
 
 
-
+.vimeo_body {
+  text-align: center;
+  margin-bottom: 40px;
+}
 .vimeo_container {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%;
-  margin-bottom: 40px;
+  padding-top: 56.25%;
+  margin-top: 40px;
 }
 .vimeo_iframe {
   position: absolute;
@@ -119,6 +133,7 @@ a.footer_a_tag:hover {
   width: 100%;
   height: 100%;
 }
+
 
 
 
